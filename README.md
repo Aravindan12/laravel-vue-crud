@@ -27,6 +27,11 @@ php artisan serve
 ```
 npm run watch
 ```
+#### To run db backup
+
+```
+php artisan backup:run --only-db
+```
 
 # Connect with Us
 
