@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Isop\Isop;
+use App\DateHelper\DateHelper;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,14 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-Route::get('{any}', function () {
-    return view('app');
-})->where('any', '.*');
+// Route::get('{any}', function () {
+//     return view('app');
+// })->where('any', '.*');
+Route::get('/greet', function() {
+    Isop::greet();
+});
+Route::get('date-class', function(){
+  
+    DateHelper::dateFormatYMD('10/21/2021');
+  
+});

@@ -175,7 +175,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
-        App\Providers\GoogleDriveServiceProvider::class
+        App\Providers\GoogleDriveServiceProvider::class,
+        App\Providers\IsopServiceProvider::class,
+        App\Providers\DateFacadesServiceProvider::class,
+
     ],
 
     /*
@@ -227,6 +230,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Isop'   =>  App\Isop\IsopFacade::class,
+        'date'   =>  App\DateHelper\DateHelperFacade::class
 
     ],
 
